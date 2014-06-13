@@ -6,8 +6,8 @@ $(document).ready(function() {
 	var number= prompt("Put in a number");
 	var error = true;
 	while (error) {
-	if (number >0 ==false || number%1 !== 0) {
-		number= prompt("You must put in a number and it must be greater than zero, put in a number");
+	if (number >0 ==false || number%1 !== 0 || number >100) {
+		number= prompt("You must put in a number and it must be between 1-100, put in a number");
 	}
 	else{
 		error = false;
