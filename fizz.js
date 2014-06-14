@@ -12,7 +12,6 @@ $(document).ready(function() {
 	}
 	else{
 		error = false;
-	}
 		for (var i = 1; i <= integer; i++) {
 		if(i%3 == 0 && i%5 == 0){
 			$("body").append(fizzbuzz); 
@@ -25,6 +24,7 @@ $(document).ready(function() {
 		}
 		else{
 		$("body").append(sent).append(i);
+	}
 	}
 	}
 	}
