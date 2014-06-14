@@ -3,17 +3,17 @@ $(document).ready(function() {
 	var buzz = "<p>buzz</p>";
 	var fizzbuzz= "<p>fizzbuzz</p>";
 	var sent = "<p> </p>"
-	var number= prompt("Put in a number");
+	var integer= prompt("Put in a number");
 	var error = true;
-	while (error) {
-	if (number >0 ==false || number%1 !== 0 || number >100) {
-		number= prompt("You must put in a number and it must be between 1-100, put in a number");
+	var count = function(integer){
+		while (error) {
+	if (integer >0 ==false || integer%1 !== 0 || integer >100) {
+		integer= prompt("You must put in a number and it must be between 1-100, put in a number");
 	}
 	else{
 		error = false;
 	}
-	};
-	for (var i = 1; i <= number; i++) {
+		for (var i = 1; i <= integer; i++) {
 		if(i%3 == 0 && i%5 == 0){
 			$("body").append(fizzbuzz); 
 		}
@@ -25,6 +25,9 @@ $(document).ready(function() {
 		}
 		else{
 		$("body").append(sent).append(i);
+	}
+	}
+	}
 	};
-	};
+	count(integer);
 })
